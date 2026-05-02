@@ -1,6 +1,6 @@
 # 🐳 Docker Laravel Development Environment
 
-Docker-based development environment untuk project **Laravel** menggunakan Laravel, PHP, Nginx, dan MySQL.
+Docker-based development environment menggunakan Laravel, PHP, Nginx, dan MySQL.
 
 ---
 
