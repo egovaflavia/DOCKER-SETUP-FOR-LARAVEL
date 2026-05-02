@@ -1,6 +1,6 @@
-# 🐳 Laravel 12 - Docker Development Environment
+# 🐳 Docker Development Environment
 
-Docker-based development environment untuk project **Company Profile** menggunakan Laravel 12, PHP 8.3 FPM, Nginx, dan MySQL 8.0.
+Docker-based development environment untuk project **Company Profile** menggunakan Laravel, PHP, Nginx, dan MySQL.
 
 ---
 
@@ -12,7 +12,7 @@ COMPANY_PROFILE/
 │   ├── nginx/
 │   │   └── default.conf          # Konfigurasi Nginx
 │   └── php/
-│       └── Dockerfile            # PHP 8.3 FPM image
+│       └── Dockerfile            # PHP 8.4 FPM image
 ├── docker-compose.yml            # Orchestration semua services
 ├── .env                          # Environment variables
 ├── README.md                     # Dokumentasi (file ini)
@@ -23,16 +23,16 @@ COMPANY_PROFILE/
 
 ## 🏗️ Step-by-Step Pembuatan
 
-### Step 1 — Dockerfile PHP 8.3 FPM
+### Step 1 — Dockerfile PHP 8.4 FPM
 
 **📄 Output:** `docker/php/Dockerfile`
 
 **💬 Prompt yang digunakan:**
 
-> Buatkan Dockerfile untuk Laravel 12 dengan PHP 8.3 FPM.
+> Buatkan Dockerfile untuk Laravel 12 dengan PHP 8.4 FPM.
 >
 > Requirements:
-> - Base image: php:8.3-fpm
+> - Base image: php:8.4-fpm
 > - Install extensions: pdo_mysql, mbstring, exif, pcntl, bcmath, gd, zip, intl, opcache
 > - Install Composer dari official image
 > - Set working directory /var/www
@@ -46,7 +46,7 @@ COMPANY_PROFILE/
 
 | Konfigurasi | Nilai |
 |---|---|
-| Base image | `php:8.3-fpm` |
+| Base image | `php:8.4-fpm` |
 | System dependencies | git, curl, libpng-dev, libjpeg62-turbo-dev, libfreetype6-dev, libonig-dev, libxml2-dev, libzip-dev, libicu-dev, zip, unzip |
 | PHP Extensions | pdo_mysql, mbstring, exif, pcntl, bcmath, gd (freetype+jpeg), zip, intl, opcache |
 | Composer | Multi-stage copy dari `composer:latest` |
@@ -59,13 +59,13 @@ COMPANY_PROFILE/
 
 ```dockerfile
 # ==============================================================================
-# PHP 8.3 FPM - Laravel 12 Development Environment
+# PHP 8.4 FPM - Laravel 12 Development Environment
 # ==============================================================================
-FROM php:8.3-fpm
+FROM php:8.4-fpm
 
 # Set maintainer label
 LABEL maintainer="developer"
-LABEL description="PHP 8.3 FPM for Laravel 12"
+LABEL description="PHP 8.4 FPM for Laravel 12"
 
 # ==============================================================================
 # Install system dependencies
@@ -552,7 +552,7 @@ Browser (localhost:8000)
         ▼
 ┌───────────────┐
 │   PHP-FPM     │  ← laravel-app
-│  (PHP 8.3)    │
+│  (PHP 8.4)    │
 └───────┬───────┘
         │ PDO MySQL (:3306)
         ▼
