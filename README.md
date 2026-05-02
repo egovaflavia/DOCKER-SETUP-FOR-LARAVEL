@@ -16,7 +16,7 @@ NAMA_PROJECT/
 ├── docker-compose.yml            # Orchestration semua services
 ├── .env                          # Environment variables
 ├── README.md                     # Dokumentasi (file ini)
-└── Laravel                       # Tinggal install Laravel (Belum ada)
+└── ... (Laravel files)           # Tinggal install Laravel (Belum ada)
 ```
 
 ---
