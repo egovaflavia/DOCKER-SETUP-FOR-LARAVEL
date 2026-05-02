@@ -1,13 +1,13 @@
 # 🐳 Docker Development Environment
 
-Docker-based development environment untuk project **Company Profile** menggunakan Laravel, PHP, Nginx, dan MySQL.
+Docker-based development environment untuk project **Laravel** menggunakan Laravel, PHP, Nginx, dan MySQL.
 
 ---
 
 ## 📁 Struktur Project
 
 ```
-COMPANY_PROFILE/
+NAMA_PROJECT/
 ├── docker/
 │   ├── nginx/
 │   │   └── default.conf          # Konfigurasi Nginx
