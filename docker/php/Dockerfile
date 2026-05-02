@@ -1,10 +1,12 @@
 # ==============================================================================
 # PHP 8.4 FPM - Laravel 13 Development Environment
+# Set up PHP 8.4 {COSTUMEABLE}
 # ==============================================================================
 FROM php:8.4-fpm
 
 # Set maintainer label
 LABEL maintainer="developer"
+# Set description label {COSTUMEABLE}
 LABEL description="PHP 8.4 FPM for Laravel 13"
 
 # ==============================================================================
